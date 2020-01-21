@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script>
+     function clean(){
+       document.getElementById("inf").innerHTML="";
+       document.getElementById("inf1").innerHTML="";
+       document.getElementById("inf2").innerHTML="";
+       document.getElementById("inf3").innerHTML="";
+     }
+
+      function er(){
+        document.getElementById("inf").innerHTML="";
+var i = 20
+while (i < 36){
+  document.getElementById("inf").innerHTML=document.getElementById("inf").innerHTML +i +"<br>" 
+  i++;
+}
+}
+      function er1(){
+        document.getElementById("inf1").innerHTML=""; 
+        var b = Number (document.getElementById("var_in").value);
+          var i = 10
+while (i <= b ){
+  document.getElementById("inf1").innerHTML=document.getElementById("inf1").innerHTML +i*i +"<br>" 
+  i++;
+}
+}
+      function er2(){
+        document.getElementById("inf2").innerHTML=""; 
+        var a = Number (document.getElementById("var_in1").value);
+          var i = 50
+while (a < i ){
+  document.getElementById("inf2").innerHTML=document.getElementById("inf2").innerHTML +a*a*a +"<br>" 
+  a++;
+}
+}
+      function er3(){
+        document.getElementById("inf3").innerHTML=""; 
+        var a = Number (document.getElementById("var_in2").value);
+        var b = Number (document.getElementById("var_in3").value);
+
+while (a <= b ){
+  document.getElementById("inf3").innerHTML=document.getElementById("inf3").innerHTML +a +"<br>" 
+  a++;
+}
+}
+</script>
+  </head>
+
+  <body>
+    <button onclick="er()">5.3 а)</button>
+    <button onclick="er1()">5.3 б)</button>
+    <button onclick="er2()">5.3 в)</button>
+    <button onclick="er3()">5.3 г)</button>
+     <button onclick="clean()">Clean</button>
+    <div id="inf"></div>
+    ____
+    <input type="text" value="15" id="var_in">
+    <div id="inf1"></div>
+    <div class="layer1">
+    <br>
+    </div>
+    ____
+    <input type="text" value="15" id="var_in1">
+    <div id="inf2"></div>
+    <div class="layer1">
+    <br>
+    </div>
+    ____
+    <input type="text" value="15" id="var_in2">
+    <input type="text" value="15" id="var_in3">
+    <div id="inf3"></div>
+    <div class="layer1">
+    <br>
+    </div>
+  </body>
+
+</html>
