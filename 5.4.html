@@ -1,0 +1,159 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>Стили</title>
+<style>
+table {
+font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+font-size: 14px;
+border-collapse: collapse;
+text-align: center;
+}
+th{
+background: #AFCDE7;
+color: white;
+padding: 10px 20px;
+}
+th, td {
+border-style: solid;
+border-width: 0 1px 1px 0;
+border-color: white;
+}
+td {
+background: #D8E6F3;
+}
+
+</style>
+<script>
+function Clean() {
+
+
+
+document.getElementById("myTable").innerHTML = "";
+
+}
+var c = 0
+var temp = ""
+var temp2 = ""
+var temp3 = ""
+var temp4 = ""
+flag = 0
+
+
+function CreateRow() {
+var y = document.createElement("TR");
+y.setAttribute("id", temp);
+document.getElementById("myTable").appendChild(y);
+
+}
+
+function CreateRow2() {
+var y = document.createElement("TR");
+y.setAttribute("id", temp2);
+document.getElementById("myTable").appendChild(y);
+
+}
+
+function CreateRow3() {
+var y = document.createElement("TR");
+y.setAttribute("id", temp3);
+document.getElementById("myTable").appendChild(y);
+
+}
+
+function CreateRow4() {
+var y = document.createElement("TR");
+y.setAttribute("id", temp4);
+document.getElementById("myTable").appendChild(y);
+
+}
+function CreateRow5() {
+var y = document.createElement("TR");
+y.setAttribute("id", temp5);
+document.getElementById("myTable").appendChild(y);
+
+}
+
+function CreateTable() {
+var x = document.createElement("TABLE");
+x.setAttribute("id", "myTable");
+document.body.appendChild(x);
+}
+
+
+function er() {
+temp = "Tr1_" + c
+temp2 = "Tr2_" + c
+temp3 = "Tr3_" + c
+temp4 = "Tr4_" + c
+temp5 = "Tr5_" + c
+c++
+if (flag == 0) {
+CreateTable()
+}
+
+CreateRow()
+flag = 1
+for (var i = 10; i <= 25; i++) {
+var z = document.createElement("TH");
+var t = document.createTextNode(i);
+z.appendChild(t);
+document.getElementById(temp).appendChild(z);
+}
+
+CreateRow2()
+for (var i = 10; i <= 25; i++) {
+var z = document.createElement("TD");
+example = i + 0.4;
+var l = document.createTextNode(example);
+z.appendChild(l);
+document.getElementById(temp2).appendChild(z);
+
+}
+
+CreateRow3()
+for (var i = 25; i <= 35; i++) {
+var z = document.createElement("TH");
+example = i;
+var l = document.createTextNode(example);
+z.appendChild(l);
+document.getElementById(temp3).appendChild(z);}
+
+CreateRow4()
+for (var i = 25; i <= 35; i++) {
+var z = document.createElement("TD");
+example = i + 0.5;
+var l = document.createTextNode(example);
+z.appendChild(l);
+document.getElementById(temp4).appendChild(z);
+
+}
+CreateRow5()
+for (var i = 25; i <= 35; i++) {
+var z = document.createElement("TD");
+example = i - 0.2;
+var l = document.createTextNode(example);
+z.appendChild(l);
+document.getElementById(temp5).appendChild(z);
+
+}
+
+
+
+
+
+}
+</script>
+</head>
+
+<body>
+<button onclick="er()">Нажми на меня</button>
+<button onclick="Clean()">Стереть таблицу</button>
+<br>
+
+<br>
+<div id="inf1"></div>
+
+
+</body>
