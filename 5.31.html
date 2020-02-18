@@ -62,7 +62,7 @@
       }
       flag = 1
       var b = Number(document.getElementById("in1").value);
-      for (var i = 1; i <= b; i++) {
+      for (var i = b; i <= 2*b; i++) {
         temp1 = "Tr" + c
         var x = document.createElement("TR");
         x.setAttribute("id", temp1);
@@ -80,24 +80,14 @@
           temp2 = "Td" + l
           var z = document.createElement("TD");
           z.setAttribute("id", temp2);
-          t = document.createTextNode(example1);
+           sum1 += i*i
+          t = document.createTextNode(sum1);
           z.appendChild(t);
-          sum1 += example1
-          example1 = example1 * 2;
+         
           document.getElementById(temp1).appendChild(z);
           l += 2;
         }
-        for (j = 0; j < 1; j++) {
-          temp3 = "Td" + m
-          var z = document.createElement("TD");
-          z.setAttribute("id", temp3);
-          t = document.createTextNode(example2);
-          z.appendChild(t);
-          sum2 += example2;
-          example2 = example2 / 2;
-          document.getElementById(temp1).appendChild(z);
-          m += 2
-        }
+        
       }
 
       addanswer();
